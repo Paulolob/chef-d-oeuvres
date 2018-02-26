@@ -1,4 +1,3 @@
 # chef-d-oeuvres
 
-slide : http://slides.com/paulbriand/chef-d-oeuvres#/1
-
+slide : https://slides.com/paulbriand/chef-d-oeuvre/edit
