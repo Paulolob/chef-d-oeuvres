@@ -1,0 +1,52 @@
+/*  browse.php */
+
+h1.accueil {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+ p.accueil {
+   margin-left: 200px;
+   margin-right: 200px;
+   color:green;
+ }
+
+a {
+  color: black;
+}
+
+
+button {
+  color: red;
+  margin-left: 40px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+.zeubi {
+  margin-left: 900px;
+}
+
+
+/* read.php */
+
+h1.read {
+  text-align: center;
+  color: red;
+}
+
+p {
+  margin-left: 40px;
+  color: green;
+}
+
+/* login.php */
+
+h1.login {
+  color: red;
+  
+}
