@@ -23,7 +23,7 @@
     ?>
     <ul>
       <?php
-        if ($todo) {
+        if ($club) {
       ?>
       <li><a href="edit.php?id=<?php echo $club['id']; ?>">modifier...</a></li>
       <li><a href="delete.php?id=<?php echo $club['id']; ?>">supprimer</a></li>

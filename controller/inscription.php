@@ -1,8 +1,8 @@
 <?php
-require ('../models/config.php');
-require ('../views/inscription.view.php');
 
-if (isset($_POST['forminscription']))
+require ('../models/user.php');
+
+if (isset($_POST['forminscription'])) 
 {
 	if(!empty($_POST['username']) AND !empty($_POST['mail']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2']))
 	{
@@ -12,18 +12,21 @@ if (isset($_POST['forminscription']))
 		$mdp2 = sha1($_POST['mdp2']);
 
 		$pseudolength = strlen($pseudo);
-		if ($pseudolength <= 255)
+		if ($pseudolength <= 255) 
 		{
-			if (filter_var($mail, FILTER_VALIDATE_EMAIL))
+			if (filter_var($mail, FILTER_VALIDATE_EMAIL)) 
 			{
-
-
+				
+			
 
 				if ($mdp==$mdp2)
 				{
-					$insertuser = $bdd->prepare('INSERT INTO users (username, email, password) VALUES (?,?,?)');
-					$insertuser->execute(array($pseudo, $mail, $mdp));
+					
+					user::insert_user($pseudo, $mail, $mdp);
+	
+
 					$erreur="Votre compte a bien été créé";
+
 
 				}
 				else
@@ -36,12 +39,12 @@ if (isset($_POST['forminscription']))
 				$erreur = "Votre adresse mail n'est pas valide!";
 			}
 		}
-		else
+		else 
 		{
 			$erreur ="Votre pseudo ne doit pas dépasser les 255 caractères";
 		}
 	}
-	else
+	else 
 	{
 		$erreur = "Tous les champs doivent étre complétés";
 	}
@@ -51,3 +54,5 @@ if (isset ($erreur))
 {
 	echo $erreur;
 }
+require ('../views/inscription.view.php');
+

@@ -13,8 +13,9 @@ h1.accueil {
    color:green;
  }
 
-a {
+a.club {
   color: black;
+  margin-left: 30px;
 }
 
 
@@ -29,6 +30,10 @@ ul {
 
 .zeubi {
   margin-left: 900px;
+}
+
+nav.abcd {
+  margin-left: 20px;
 }
 
 
@@ -48,5 +53,5 @@ p {
 
 h1.login {
   color: red;
-  
+
 }

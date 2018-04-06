@@ -8,7 +8,7 @@
 	<div align="center">
 
 		<h1>Formulaire d'inscription</h1>
-		<form method="POST" action="../controller/inscription.php">
+		<form method="POST" action="">
 			<table>
 				<tr>
 					<td align="right">Pseudo</label></td>
@@ -27,7 +27,8 @@
 					<td><input type="password" name="mdp2"></td>
 				</tr>
 			</table>
-			<input type="submit" name="forminscription" value="je m'inscris">
+			<input type="submit" name="forminscription" value="je m'inscris"><br><br><br>
+			<a href="../index.php"> retour à l'accueil</a>
 
 		</form>
 	</div>
