@@ -66,6 +66,65 @@ class Club
         return $clubs;
     }
 
+
+
+    public static function readbydpt()
+    {
+
+          $sql =
+              'SELECT * FROM clubs WHERE deleted_at IS NULL ORDER BY dept';
+
+          $clubs = [];
+
+          $pdo_statement = self::createStatement($sql);
+
+          if ($pdo_statement && $pdo_statement->execute()) {
+              $clubs = $pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+          }
+
+          return $clubs;
+    }
+
+
+
+    public static function readParis()
+    {
+
+          $sql =
+              "SELECT * FROM clubs WHERE deleted_at IS NULL AND dept='75'";
+
+          $clubs = [];
+
+          $pdo_statement = self::createStatement($sql);
+
+          if ($pdo_statement && $pdo_statement->execute()) {
+              $clubs = $pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+          }
+
+          return $clubs;
+    }
+
+
+    public static function read92()
+    {
+
+          $sql =
+              "SELECT * FROM clubs WHERE deleted_at IS NULL AND dept='92'";
+
+          $clubs = [];
+
+          $pdo_statement = self::createStatement($sql);
+
+          if ($pdo_statement && $pdo_statement->execute()) {
+              $clubs = $pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+          }
+
+          return $clubs;
+    }
+
+
+
+
     public static function read($id)
     {
         $sql =

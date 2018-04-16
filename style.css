@@ -1,7 +1,7 @@
 /*  browse.php */
 
 h1.accueil {
-  color: red;
+  color: green;
   text-align: center;
   font-weight: bold;
 }
@@ -36,6 +36,11 @@ nav.abcd {
   margin-left: 20px;
 }
 
+h3.region {
+margin-left: 50px;
+color: red;
+}
+
 
 /* read.php */
 
@@ -46,7 +51,7 @@ h1.read {
 
 p {
   margin-left: 40px;
-  color: green;
+  color: yellow;
 }
 
 /* login.php */

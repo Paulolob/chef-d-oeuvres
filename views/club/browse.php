@@ -59,22 +59,43 @@
     <h1 class="accueil"> Sportsmatch </h1>
     <p class="accueil"> Quel parent, désireux d’inscrire son enfant dans un club, n’a jamais été découragé face au parcours du combattant que représente la recherche du club idéal ? Proximité, horaires, coûts sont les principaux tenants de l’adhésion à un club. Pourtant, aucune plateforme ne répond efficacement à cette équation. </p>
 
-
+    <h3 class="region"> club de Paris </h3>
     <ul>
     <?php
-      foreach ($clubs as $club) {
+      foreach ($clubs92 as $club92) {
     ?>
       <li>
-        <a class="club" href="read.php?id=<?php echo $club['id']; ?>">
-         <?php echo $club['nom']; ?> <br>
-        
+        <a class="club" href="read.php?id=<?php echo $club92['id']; ?>">
+         <?php echo  $club92['nom']; ?>
+         <?php echo "<p style='color:red;'>".$club92['dept']."</p>"; ?>
+
         </a>
       </li>
     <?php
       }
     ?>
-      <li><a href="add.php">ajouter une tâche...</a></li>
+
     </ul>
+
+    <h3 class="region"> club des Hauts de Seine </h3>
+    <ul>
+    <?php
+      foreach ($clubs75 as $club75) {
+    ?>
+      <li>
+        <a class="club" href="read.php?id=<?php echo $club75['id']; ?>">
+         <?php echo  $club75['nom']; ?>
+         <?php echo "<p style='color:red;'>".$club75['dept']."</p>"; ?>
+
+        </a>
+      </li>
+    <?php
+      }
+    ?>
+      <li><a href="add.php">ajouter une club...</a></li>
+    </ul>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

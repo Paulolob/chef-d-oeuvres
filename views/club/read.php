@@ -17,7 +17,9 @@
       if ($club) {
     ?>
     <h1 class="read"><?php echo $club['nom']; ?></h1>
-    <p><?php echo $club['adresse']; ?></p>
+    <p> adresse : <?php echo $club['adresse']; ?></p>
+    <p> les sports : <?php echo $club['sports']; ?></p>
+    <a href=#> contactez le club </a> 
     <?php
       }
     ?>
